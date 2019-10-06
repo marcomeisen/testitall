@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:test_it_all/widgets/task_tile.dart';
+
+var task;
+List<TaskTile> taskTile;
 
 class AddTaskScreen extends StatelessWidget {
-  String task;
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,6 +33,7 @@ class AddTaskScreen extends StatelessWidget {
               cursorColor: Colors.purple,
               onChanged: (value) {
                 task = value;
+                taskTile.add(task);
               },
             ),
             SizedBox(
